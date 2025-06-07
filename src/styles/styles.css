@@ -43,36 +43,6 @@ nav ul li a:hover {
   opacity: 0.8;
 }
 
-.theme-toggle {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-.theme-toggle {
-  display: flex;
-  gap: 1.2rem;
-  align-items: center;
-  margin-right: 2rem;
-}
-
-.theme-toggle button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.2s;
-  padding: 0;
-}
-
-.theme-toggle button:hover {
-  transform: scale(1.2);
-}
-
-.theme-icon {
-  width: 32px;
-  height: 32px;
-}
-
 section {
   padding: 0 5%;
 }
@@ -223,39 +193,339 @@ section {
 }
 
 #objectives {
-  justify-content: start;
+  position: relative;
+  display: flex;
   align-items: center;
-  flex-direction: column-reverse;
+  justify-content: space-between;
+  padding-top: 2vw;
 }
 
 #objectivesText {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  height: 31vw;
 }
 
-#objectives img {
-  width: 100%;
-  z-index: 2;
+#objectives img,
+#benefits img {
+  width: 40%;
 }
 
-#objectivesText {
-  height: 60vh;
+#slideshow {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
 }
 
-#objectivesText .sectionTitle {
-  font-size: 10vw;
-}
-
-#impacted .sectionTitle {
-  font-size: 13vw;
-  margin-bottom: 10vh;
-}
-
+#objectivesText .sectionTitle,
+#impacted .sectionTitle,
 #impacted p:nth-child(2) {
-  font-size: 5vw;
-  line-height: 1.7;
+  text-align: center;
+  margin-bottom: 2vw;
+}
+
+#objectivesText .sectionTitle,
+#objectivesText p:nth-child(2) {
+  text-align: start;
+}
+
+#impacted {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background-image: url('../assets/img/jonathan-ford-6ZgTEtvD16I-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+}
+
+#benefits {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#benefitsText {
+  width: 50%;
+  text-align: end;
+}
+
+#benefits .sectionTitle {
+  margin-bottom: 2vw;
+}
+
+.subText {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+#practice {
+  position: relative;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url('../assets/img/smart-monhole.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 60%;
+}
+
+#practice img {
+  width: 80%;
+}
+
+.practiceText {
+  width: 50%;
+}
+
+#practice .sectionTitle {
+  text-align: start;
+  margin-bottom: 3vw;
+}
+
+#practice p {
+  text-align: start;
+}
+
+.darkBg {
+  background-color: #121212;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.glassBg {
+  background: rgba(255, 255, 255, 0.055);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(5px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.041);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.theme-toggle {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.theme-toggle {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.theme-toggle button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+  padding: 0;
+}
+
+.theme-toggle button:hover {
+  transform: scale(1.2);
+}
+
+.theme-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.footer {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  border-top: 1px solid #444;
+}
+
+.footer-content p {
+  margin: 0.3rem 0;
+}
+
+.footer-credits {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger-menu .line {
+  width: 30px;
+  height: 3px;
+  margin: 6px 0;
+  transition: all 0.4s ease;
 }
 
 @media (max-width: 768px) {
+  header {
+    height: 20vw;
+  }
+
+  #problem {
+    justify-content: center;
+    align-items: center;
+    background-size: 100% 100%;
+  }
+
+  #problem .left {
+    width: 100%;
+    height: 80vh;
+    justify-content: space-between;
+    padding: 20% 0;
+  }
+
+  #problem p {
+    line-height: 1.5;
+    font-size: 4vw;
+    font-weight: 700;
+  }
+
+  #initialPhrase {
+    font-size: 13vw;
+  }
+
+  #technologies {
+    flex-direction: column;
+    justify-content: center !important;
+  }
+
+  #technologiesDescription {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+  }
+
+  #technologiesDescription span {
+    font-size: 9vw;
+    margin-bottom: 5vw;
+  }
+
+  #changeDescription p {
+    font-size: 5vw;
+    text-align: center;
+  }
+
+  #groupTechnologiesCards {
+    width: 100%;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: repeat(3, 27%);
+    align-content: center;
+    justify-content: center;
+    gap: 2vw;
+  }
+
+  #objectives {
+    justify-content: start;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+
+  #objectivesText {
+    width: 100%;
+  }
+
+  #objectives img {
+    width: 100%;
+    z-index: 2;
+  }
+
+  #objectivesText {
+    height: 60vh;
+  }
+
+  #objectivesText .sectionTitle {
+    font-size: 10vw;
+  }
+
+  #impacted .sectionTitle {
+    font-size: 13vw;
+    margin-bottom: 10vh;
+  }
+
+  #impacted p:nth-child(2) {
+    font-size: 5vw;
+    line-height: 1.7;
+  }
+
+  #benefits {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #benefits img {
+    width: 100%;
+  }
+
+  #benefitsText {
+    width: 100%;
+    margin-bottom: 5vh;
+  }
+
+  #benefitsText .sectionTitle {
+    font-size: 9.5vw;
+    text-align: start;
+  }
+
+  #benefitsText p:nth-child(2) {
+    font-size: 4.8vw;
+    text-align: start;
+    line-height: 1.3;
+  }
+
+  #practice {
+    background-position: 50% 0;
+    justify-content: start;
+    padding-top: 6vh;
+  }
+
+  .practiceText {
+    width: 100%;
+  }
+
+  .quiz-container {
+    width: 100%;
+  }
+
+  #practice .sectionTitle {
+    text-align: start;
+    font-size: 8vw;
+  }
+
+  #practice p:nth-child(2) {
+    display: none;
+  }
+
+  nav ul li a {
+    color: none;
+  }
+
+  #logo {
+    width: 6%;
+  }
+
+  .theme-toggle {
+    margin-right: 0;
+  }
+
   .nav-menu {
     background-color: none;
     position: fixed;
@@ -273,13 +543,8 @@ section {
     transition: transform 0.5s ease-in-out;
   }
 
-  .theme-toggle {
-    margin-right: 0;
-  }
-
-  .nav-menu ul li a {
-    font-size: 1.2rem;
-    /* Aumenta o tamanho da fonte para toque */
+  .nav-menu.nav-active {
+    transform: translateX(0);
   }
 
   .nav-menu ul {
@@ -290,7 +555,28 @@ section {
     padding-top: 50px;
   }
 
-  .nav-menu.nav-active {
-    transform: translateX(0);
+  .nav-menu ul li a {
+    font-size: 1.2rem;
+  }
+
+  .hamburger-menu {
+    display: block;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 4;
+  }
+
+  .hamburger-menu.toggle .line:nth-child(1) {
+    transform: rotate(45deg) translate(13px, 2px);
+  }
+
+  .hamburger-menu.toggle .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-menu.toggle .line:nth-child(3) {
+    transform: rotate(-45deg) translate(10px, 0px);
   }
 }
