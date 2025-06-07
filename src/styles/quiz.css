@@ -60,9 +60,9 @@ body,
   background-color: var(--color-primary);
   border-radius: 1rem;
 }
-.quiz-container::-webkit-scrollbar-track {
+/* .quiz-container::-webkit-scrollbar-track {
   background-color: var(--color-background);
-}
+} */
 
 .quiz-title {
   text-align: center;
