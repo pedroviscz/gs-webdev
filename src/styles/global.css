@@ -1,79 +1,85 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 button {
-    outline: none;
-    -webkit-tap-highlight-color: transparent;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
-body{ 
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* Internet Explorer */ 
+body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-html{ scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
-::-webkit-scrollbar { display: none; }
+::-webkit-scrollbar {
+  display: none;
+}
 
 .filter::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    pointer-events: none;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
 }
 
-.light::after{
-    background-color: rgba(0, 0, 0, 0.411);
+.light::after {
+  background-color: rgba(0, 0, 0, 0.411);
 }
-.medium::after{
-    background-color: rgba(0, 0, 0, 0.548);
+.medium::after {
+  background-color: rgba(0, 0, 0, 0.548);
 }
-.strong::after{
-    background-color: rgba(0, 0, 0, 0.63);
-}
-
-.filter>* {
-    position: relative;
-    z-index: 2;
+.strong::after {
+  background-color: rgba(0, 0, 0, 0.63);
 }
 
-.inter { font-family: 'Inter'; }
+.filter > * {
+  position: relative;
+  z-index: 2;
+}
+
+.inter {
+  font-family: 'Inter';
+}
 
 .alert-color {
-    color: #ff9502;
+  color: #ff9502;
 }
 
 .lightText {
-    color: white;
+  color: white;
 }
 
 .darkText {
-    color: #000;
+  color: #000;
 }
 
 .lightBg {
-    background-color: #fff;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .darkBg {
-    background-color: #121212;
+  background-color: #121212;
 }
 
 .glassBg {
-    background: rgba(255, 255, 255, 0.055);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(5px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.041);
+  background: rgba(255, 255, 255, 0.055);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(5px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.041);
 }

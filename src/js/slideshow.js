@@ -4,7 +4,7 @@ export function slideShow() {
   const imagesSrc = [
     'david-huck-6_a4IzF9fYA-unsplash.jpg',
     'sigmund-0dM5sa4zfZ8-unsplash.jpg',
-    'kelly-sikkema-_whs7FPfkwQ-unsplash.jpg'
+    'kelly-sikkema-_whs7FPfkwQ-unsplash.jpg',
   ];
 
   let i = 0;
@@ -18,6 +18,6 @@ export function slideShow() {
       img.src = `src/assets/img/${imagesSrc[i]}`;
 
       img.style.opacity = 1;
-    }, 500); // mesmo tempo de transition do css
+    }, 500);
   }, 2500);
 }

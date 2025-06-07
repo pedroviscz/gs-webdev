@@ -93,4 +93,4 @@ export function headerChange() {
   onThemeChange(handleScroll); // reage à mudança de tema
   handleScroll(); // chamada inicial
 }
-""
+('');
