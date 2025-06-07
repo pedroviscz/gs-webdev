@@ -222,6 +222,39 @@ section {
   width: 60%;
 }
 
+#objectives {
+  justify-content: start;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+
+#objectivesText {
+  width: 100%;
+}
+
+#objectives img {
+  width: 100%;
+  z-index: 2;
+}
+
+#objectivesText {
+  height: 60vh;
+}
+
+#objectivesText .sectionTitle {
+  font-size: 10vw;
+}
+
+#impacted .sectionTitle {
+  font-size: 13vw;
+  margin-bottom: 10vh;
+}
+
+#impacted p:nth-child(2) {
+  font-size: 5vw;
+  line-height: 1.7;
+}
+
 @media (max-width: 768px) {
   .nav-menu {
     background-color: none;
