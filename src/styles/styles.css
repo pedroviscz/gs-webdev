@@ -1,114 +1,263 @@
 html,
 body,
 section {
-    overflow-x: hidden;
-    min-width: 100vw;
-    min-height: 100vh;
+  overflow-x: hidden;
+  min-width: 100vw;
+  min-height: 100vh;
 }
 
 header {
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: transparent;
-    padding: 0 5%;
-    width: 100%;
-    height: 6vw;
-    z-index: 3;
-    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  padding: 0 5%;
+  width: 100%;
+  height: 6vw;
+  z-index: 3;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
 }
 
 #logo {
-    width: 2.3%;
+  width: 2.3%;
 }
 
 nav ul {
-    display: flex;
-    gap: 2vw;
+  display: flex;
+  gap: 2vw;
 }
 
 nav ul li {
-    list-style: none;
+  list-style: none;
 }
 
 nav ul li a {
-    font-family: 'Inter';
-    color: white;
-    text-decoration: none;
-    transition: .2s ease;
+  font-family: 'Inter';
+  color: white;
+  text-decoration: none;
+  transition: 0.2s ease;
 }
 
 nav ul li a:hover {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .theme-toggle {
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 .theme-toggle {
-    display: flex;
-    gap: 1.2rem;
-    align-items: center;
-    margin-right: 2rem;
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  margin-right: 2rem;
 }
 
 .theme-toggle button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.2s;
-    padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+  padding: 0;
 }
 
 .theme-toggle button:hover {
-    transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .theme-icon {
-    width: 32px;
-    height: 32px;
+  width: 32px;
+  height: 32px;
+}
+
+section {
+  padding: 0 5%;
+}
+
+#problem {
+  position: relative;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  background-image: url('../assets/img/wolfgang-hasselmann-sqJ5mnQ7wmM-unsplash.jpg');
+  background-size: 111%;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  z-index: 0;
+}
+
+#problem .left {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#problem p {
+  line-height: 1.7;
+  font-weight: semi-bold;
+}
+
+#initialPhrase {
+  font-weight: normal;
+  text-align: start;
+  font-size: 5vw;
+  margin-bottom: 2vw;
+}
+
+.sectionTitle {
+  font-size: 3vw;
+  font-weight: 600;
+}
+
+#technologies {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#technologiesDescription {
+  padding-top: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 31vw;
+  height: 31vw;
+  padding: 5% 0;
+}
+
+#changeDescription {
+  flex: 1;
+}
+
+#technologiesDescription .sectionTitle {
+  margin-bottom: 2vw;
+}
+
+#technologiesDescription #subtitle {
+  font-size: 1.2vw;
+  font-weight: 600;
+}
+
+#descriptionBox {
+  line-height: 1.7;
+  font-size: 1.4vw;
+  font-weight: 600;
+}
+
+#groupTechnologiesCards {
+  display: grid;
+  grid-template-columns: repeat(3, 9vw);
+  grid-template-rows: repeat(3, 9vw);
+  gap: 2vw;
+  width: 31vw;
+}
+
+#groupTechnologiesCards .technologyCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  transition: 0.4s ease;
+}
+
+.technologyCard {
+  transition: border 0.3s ease;
+}
+
+.lightCardBorder,
+.cloudCardBorder {
+  border: 2px solid #00000070;
+}
+
+.darkCardBorder {
+  border: 2px solid #2c2c2c;
+}
+
+#groupTechnologiesCards .technologyCard:nth-child(7) {
+  grid-column: 2;
+}
+
+#groupTechnologiesCards .technologyCard:hover {
+  scale: 1.02;
+}
+
+.cardHoverLight:hover {
+  border-color: #fff;
+}
+
+.cardHoverDark:hover {
+  border-color: #000;
+}
+
+#groupTechnologiesCards .technologyCard:nth-child(1):hover {
+  border-color: #0086d4;
+}
+
+#groupTechnologiesCards .technologyCard:nth-child(3):hover {
+  border-color: #ff6d00;
+}
+
+#groupTechnologiesCards .technologyCard:nth-child(4):hover {
+  border-color: #0277bd;
+}
+
+#groupTechnologiesCards .technologyCard:nth-child(5):hover {
+  border-color: #ffd600;
+}
+
+#groupTechnologiesCards .technologyCard:nth-child(7):hover {
+  border-top: 2px solid #0277bd;
+  border-left: 2px solid #0277bd;
+  border-bottom: 2px solid #ffc107;
+  border-right: 2px solid #ffc107;
+}
+
+#groupTechnologiesCards .technologyCard img {
+  width: 60%;
 }
 
 @media (max-width: 768px) {
-    .nav-menu {
-        background-color: none;
-        position: fixed;
-        top: 20vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        right: -5%;
-        width: 70vw;
-        height: calc(100vh - 15vw);
-        background-color: var();
-        z-index: 2;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in-out;
-    }
+  .nav-menu {
+    background-color: none;
+    position: fixed;
+    top: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    right: -5%;
+    width: 70vw;
+    height: calc(100vh - 15vw);
+    background-color: var();
+    z-index: 2;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+  }
 
-    .theme-toggle {
-        margin-right: 0;
-    }
+  .theme-toggle {
+    margin-right: 0;
+  }
 
-    .nav-menu ul li a {
-        font-size: 1.2rem;
-        /* Aumenta o tamanho da fonte para toque */
-    }
+  .nav-menu ul li a {
+    font-size: 1.2rem;
+    /* Aumenta o tamanho da fonte para toque */
+  }
 
-    .nav-menu ul {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 25px;
-        padding-top: 50px;
-    }
+  .nav-menu ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding-top: 50px;
+  }
 
-    .nav-menu.nav-active {
-        transform: translateX(0);
-    }
+  .nav-menu.nav-active {
+    transform: translateX(0);
+  }
 }
